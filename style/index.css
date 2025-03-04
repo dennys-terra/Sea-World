@@ -105,3 +105,48 @@ a {
 #hangouts img {
     object-position: center;
 }
+
+.gallery__img {
+    border-radius: .75rem;
+    height: 16rem;
+    width: 16rem;
+    object-fit: cover; 
+    transform: rotate(-2deg); /* deg = degrees */
+}
+
+.gallery__img-wrapper {
+    display: inline-block;
+    position: relative;
+}
+
+.gallery__img-wrapper + .gallery__img-wrapper {
+    margin-left: 3rem;
+    margin-top: 3rem;
+}
+
+.gallery__img-wrapper:nth-child(even) > .gallery__img {
+    /* 
+       ATENÇÃO: Essa propriedade não foi colocada durante a aula por falta de atenção minha,
+       ela é necessária para que a propriedade "top: 1rem;" abaixo tenha efeito.
+       Desculpe-me pela falta de atenção ^^" 
+    */
+    position: relative;
+    top: 1rem;
+    transform: rotate(2deg);
+}
+
+.gallery__img-wrapper::after {
+    content: "";
+    background-color: rgb(228, 26, 26);
+    border-radius: 999px;
+    display: block;
+    height: 1.25rem;
+    width: 1.25rem;
+    position: absolute;
+    top: 0.25rem;
+    right: 1rem;
+}
+
+.gallery__img-wrapper:nth-child(even)::after {
+    left: 1rem;
+}
