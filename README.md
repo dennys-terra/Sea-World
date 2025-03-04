@@ -1,1 +1,1 @@
-# seal-world
+# sea-world
