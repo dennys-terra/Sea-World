@@ -150,3 +150,26 @@ a {
 .gallery__img-wrapper:nth-child(even)::after {
     left: 1rem;
 }
+
+footer {
+    margin-top: 4rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.heart {
+  animation: heartbeat 0.6s infinite ease-in-out;
+  transform-origin: center;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+  }
+  
