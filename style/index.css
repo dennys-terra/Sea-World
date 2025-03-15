@@ -77,9 +77,9 @@ a {
     /* eixo x, eixo y, blur, expansão/recuo, cor */
     box-shadow: 0 1rem 2rem -0.5rem rgba(20, 116, 180, 0.25);
     object-fit: cover;
-    object-position: center;
+    object-position: top;
     position: relative;
-    height: 80vh;
+    height: 75vh;
     width: 100%;
     max-width: 100%;
 }
@@ -98,6 +98,22 @@ a {
     margin-right: 4rem;
     margin-bottom: 2rem;
     width: 100%;
+}
+
+.img1 {
+    object-position: top;
+}
+
+.img2 {
+    object-position: center;
+}
+
+.img3 {
+    object-position: center;
+}
+
+.img4 {
+    object-position: center;
 }
 
 .section__text-inline {
