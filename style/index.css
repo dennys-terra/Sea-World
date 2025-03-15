@@ -24,6 +24,7 @@ a {
     background: linear-gradient(rgba(0, 0, 0, 0.1), var(--color-background));
     position: relative;
     min-height: 100vh;
+    width: 100%
 }
 
 .hero__background {
@@ -32,6 +33,7 @@ a {
     top: 0;
     height: 100vh;
     width: 100%;
+    max-width: 100%;
     z-index: -10;
 }
 
@@ -55,6 +57,7 @@ a {
 .section {
     overflow: hidden;
     padding: 0 8rem;
+    width: 100%;
     text-align: center;
 }
 
@@ -72,8 +75,8 @@ a {
     object-fit: cover;
     object-position: top;
     position: relative;
-    max-height: 30rem;
     width: 100%;
+    max-width: 100%;
 }
 
 .section__text,
@@ -89,8 +92,7 @@ a {
     float: left;
     margin-right: 4rem;
     margin-bottom: 2rem;
-    height: 25rem;
-    width: 20rem;
+    width: 100%;
 }
 
 .section__text-inline {
@@ -98,7 +100,7 @@ a {
     text-align: left;
 }
 
-.section__text-inline > p {
+.section__text-inline>p {
     margin-top: 1.5rem;
 }
 
@@ -110,8 +112,9 @@ a {
     border-radius: .75rem;
     height: 16rem;
     width: 16rem;
-    object-fit: cover; 
-    transform: rotate(-2deg); /* deg = degrees */
+    object-fit: cover;
+    transform: rotate(-2deg);
+    /* deg = degrees */
 }
 
 .gallery__img-wrapper {
@@ -119,12 +122,12 @@ a {
     position: relative;
 }
 
-.gallery__img-wrapper + .gallery__img-wrapper {
+.gallery__img-wrapper+.gallery__img-wrapper {
     margin-left: 3rem;
     margin-top: 3rem;
 }
 
-.gallery__img-wrapper:nth-child(even) > .gallery__img {
+.gallery__img-wrapper:nth-child(even)>.gallery__img {
     position: relative;
     top: 1rem;
     transform: rotate(2deg);
@@ -153,18 +156,43 @@ footer {
 }
 
 .heart {
-  animation: heartbeat 0.6s infinite ease-in-out;
-  transform-origin: center;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+    animation: heartbeat 0.6s infinite ease-in-out;
+    transform-origin: center;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
 }
 
 @keyframes heartbeat {
-    0%, 100% {
-      transform: scale(1);
+
+    0%,
+    100% {
+        transform: scale(1);
     }
+
     50% {
-      transform: scale(1.2);
+        transform: scale(1.2);
     }
-  }
-  
+}
+
+@media (max-width:768px) {
+    .hero__foreground {
+        padding-top: 20vh;
+    }
+
+    .section {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: colum;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .section img {
+        margin: 0 auto;
+        height: 40vh;
+    }
+
+}
