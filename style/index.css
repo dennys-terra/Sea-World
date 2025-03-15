@@ -46,12 +46,14 @@ a {
 .hero__title {
     font-size: 5rem;
     font-weight: 300;
+    text-shadow: 0px 0px 5px #fff, 0px 0px 10px #fff, 0px 0px 15px #fff;
 }
 
 .hero__text {
     margin-top: 2rem;
     letter-spacing: 0.5rem;
     text-transform: uppercase;
+    text-shadow: 0px 0px 10px #fff, 0px 0px 20px #fff, 0px 0px 30px #fff;
 }
 
 .section {
@@ -65,7 +67,8 @@ a {
     font-size: 3rem;
     font-weight: 300;
     margin: 4rem auto;
-    color: red;
+    color: #1a609d;
+    text-shadow: 0px 0px 5px #1a609d, 0px 0px 10px #1a609d, 0px 0px 15px #1a609d;
 }
 
 .section__img,
@@ -74,8 +77,9 @@ a {
     /* eixo x, eixo y, blur, expansão/recuo, cor */
     box-shadow: 0 1rem 2rem -0.5rem rgba(20, 116, 180, 0.25);
     object-fit: cover;
-    object-position: top;
+    object-position: center;
     position: relative;
+    height: 80vh;
     width: 100%;
     max-width: 100%;
 }
@@ -136,7 +140,7 @@ a {
 
 .gallery__img-wrapper::after {
     content: "";
-    background-color: rgb(228, 26, 26);
+    background-color: #1a609d;
     border-radius: 999px;
     display: block;
     height: 1.25rem;
@@ -205,5 +209,10 @@ footer {
         margin: 1rem auto;
     }
 
+    .section__text,
+    .section__text-inline {
+        width: 25rem;
+        padding: 1rem;
+    }
 
 }
