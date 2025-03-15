@@ -65,6 +65,7 @@ a {
     font-size: 3rem;
     font-weight: 300;
     margin: 4rem auto;
+    color: red;
 }
 
 .section__img,
@@ -180,19 +181,29 @@ footer {
     }
 
     .section {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: colum;
-        justify-content: center;
-        align-items: center;
-        font-size: 1rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+        /* display: flex;
+        /* flex-wrap: wrap; */
+        /* flex-direction: colum; */
+        /* justify-content: center; */
+        /* align-items: center; */
+        display: grid;
+        grid-template-columns: repeat(1, fr);
+        place-content: center;
+        font-size: 1.5rem;
+        margin-top: 0;
+        margin-bottom: 0;
     }
 
     .section img {
         margin: 0 auto;
         height: 40vh;
     }
+
+    .section__title {
+        font-size: 3rem;
+        font-weight: 300;
+        margin: 1rem auto;
+    }
+
 
 }
